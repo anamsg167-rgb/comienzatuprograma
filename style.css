@@ -1,16 +1,16 @@
 @font-face {
   font-family: "RecoletaBold";
-  src: url("./fonts/recoletabold.otf") format("opentype");
+  src: url("./recoletabold.otf") format("opentype");
 }
 
 @font-face {
   font-family: "AvertaBold";
-  src: url("./fonts/avertabold.otf") format("opentype");
+  src: url("./avertabold.otf") format("opentype");
 }
 
 @font-face {
   font-family: "AvertaSemibold";
-  src: url("./fonts/avertasemibold.otf") format("opentype");
+  src: url("./avertasemibold.otf") format("opentype");
 }
 
 * {
