@@ -1,4 +1,4 @@
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzwAlzXVPYe3sgh5BZcWl3jwi0jlRegufO22qlmpvCk/exec";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzua2C-ZSjx1lWHdPTdJ2zObtNgHpr32SQY_9R3H9FAl5bjB0KY2JXKfqa9M58y-ghjXw/exec";
 
 flatpickr("#fechaNacimiento", {
   dateFormat: "d/m/Y",
