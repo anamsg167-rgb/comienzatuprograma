@@ -78,12 +78,9 @@ document.getElementById("formulario").addEventListener("submit", async function(
 
   try {
     await fetch(WEB_APP_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "text/plain;charset=utf-8"
-      },
-      body: JSON.stringify(data)
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify(data)
     });
 
     mensaje.textContent = "Formulario enviado correctamente.";
