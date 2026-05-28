@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "RecoletaBold";
+  src: url("fonts/recoletabold.otf");
+}
+
+@font-face {
+  font-family: "AvertaBold";
+  src: url("fonts/avertabold.otf");
+}
+
+@font-face {
+  font-family: "AvertaSemibold";
+  src: url("fonts/avertasemibold.otf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: white;
+  color: #234097;
+  font-family: "AvertaBold", Arial, sans-serif;
+}
+
+.container {
+  padding: 30px 45px;
+}
+
+h1 {
+  font-family: "RecoletaBold", Arial, sans-serif;
+  color: #0aab52;
+  font-size: 42px;
+  margin-bottom: 70px;
+}
+
+h2, h3 {
+  font-family: "RecoletaBold", Arial, sans-serif;
+  color: #234097;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 32px;
+  margin-top: 40px;
+}
+
+.intro {
+  font-family: "AvertaSemibold", Arial, sans-serif;
+  color: #234097;
+  font-size: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 28px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+input, select {
+  width: 100%;
+  height: 56px;
+  border: 1.5px solid #234097;
+  border-radius: 5px;
+  padding: 0 16px;
+  font-family: "AvertaSemibold", Arial, sans-serif;
+  font-size: 16px;
+  color: #234097;
+}
+
+input::placeholder {
+  color: #7b8190;
+}
+
+small {
+  display: block;
+  margin-top: 6px;
+  color: red;
+  font-size: 13px;
+}
+
+button {
+  margin-top: 45px;
+  width: 220px;
+  height: 55px;
+  border: none;
+  border-radius: 5px;
+  background: #0aab52;
+  color: white;
+  font-family: "AvertaBold", Arial, sans-serif;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#mensaje {
+  margin-top: 18px;
+  font-family: "AvertaSemibold", Arial, sans-serif;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+}
