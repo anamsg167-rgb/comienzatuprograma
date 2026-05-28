@@ -1,83 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Comienza tu programa</title>
-
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GO WEX</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <main class="container">
-    <h1>COMIENZA TU PROGRAMA</h1>
 
-    <h2>¡Da el primer paso a este gran cambio!</h2>
-    <p class="intro">
-      Llena el formulario con tus datos para que puedas sumarte al programa que estás buscando y puedas dar tu evaluación personal.
-    </p>
+<header class="navbar">
+  <div class="logo-box">
+    <img src="img/logo.png" alt="GO WEX Logo">
+  </div>
 
-    <h3>01. Datos personales</h3>
+  <nav class="menu">
+    <a href="index.html" class="active">INICIO</a>
+    <a href="programas.html">NUESTROS PROGRAMAS</a>
+    <a href="blog.html">BLOG</a>
+    <a href="comienza.html">COMIENZA TU PROGRAMA</a>
+    <a href="contactanos.html">CONTÁCTANOS</a>
+  </nav>
+</header>
 
-    <form id="formulario">
-      <div class="grid">
-        <div>
-          <label>Nombres completos *</label>
-          <input id="nombres" name="nombres" placeholder="Ingresa tus nombres completos" required>
-        </div>
+<section class="carousel">
+  <div class="slides">
+    <img src="img/carrusel1.jpg" class="slide active">
+    <img src="img/carrusel2.jpg" class="slide">
+    <img src="img/carrusel3.jpg" class="slide">
+  </div>
 
-        <div>
-          <label>Apellidos completos *</label>
-          <input id="apellidos" name="apellidos" placeholder="Ingresa tus apellidos completos" required>
-        </div>
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</section>
 
-        <div>
-          <label>Documento de identidad *</label>
-          <select name="tipoDocumento" required>
-            <option value="">Tipo de documento de identidad</option>
-            <option>DNI</option>
-            <option>RUT</option>
-            <option>Pasaporte</option>
-            <option>Carnet de extranjería</option>
-          </select>
-        </div>
-
-        <div>
-          <label>Número de identidad *</label>
-          <input id="numeroIdentidad" name="numeroIdentidad" placeholder="Ingresa tu número de identidad" required>
-        </div>
-
-        <div>
-          <label>Fecha de nacimiento *</label>
-          <input id="fechaNacimiento" name="fechaNacimiento" placeholder="Ingresa tu fecha de nacimiento" required readonly>
-        </div>
-
-        <div>
-          <label>Celular *</label>
-          <input id="celular" name="celular" placeholder="Ingresa tu celular" required>
-        </div>
-
-        <div>
-          <label>Correo electrónico *</label>
-          <input id="email" name="email" type="email" placeholder="Ingresa tu correo electrónico" required>
-          <small id="emailError"></small>
-        </div>
-
-        <div>
-          <label>Confirma tu correo electrónico *</label>
-          <input id="confirmarEmail" name="confirmarEmail" type="email" placeholder="Ingresa nuevamente tu correo electrónico" required>
-          <small id="confirmError"></small>
-        </div>
-      </div>
-
-      <button type="submit">Enviar</button>
-      <p id="mensaje"></p>
-    </form>
-  </main>
-
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
-  <script src="script.js"></script>
+<script src="home.js"></script>
 </body>
 </html>
