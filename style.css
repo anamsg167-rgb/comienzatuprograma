@@ -366,3 +366,75 @@ button:hover {
     font-size: 18px;
   }
 }
+/* Selector de idioma */
+.language-switch {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.language-switch button {
+  border: 1px solid #234097;
+  background: white;
+  color: #234097;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.language-switch button:hover,
+.language-switch .active-lang {
+  background: #234097;
+  color: white;
+}
+
+/* Teléfono con banderita */
+.iti {
+  width: 100%;
+}
+
+.iti input {
+  width: 100%;
+}
+
+.iti__selected-country {
+  border-right: 1px solid #d0d5dd;
+}
+
+/* Campo oculto para “Otro” */
+.hidden {
+  display: none;
+}
+
+/* Separación entre secciones */
+form h3 {
+  margin-top: 42px;
+  margin-bottom: 24px;
+}
+
+/* Mensajes de error */
+small {
+  display: block;
+  margin-top: 6px;
+  color: red;
+  font-size: 12px;
+}
+
+/* Mensaje final */
+#mensaje {
+  margin-top: 18px;
+  font-weight: 700;
+}
+
+/* Mejor ajuste en celular */
+@media (max-width: 768px) {
+  .language-switch {
+    justify-content: center;
+  }
+
+  .iti {
+    width: 100%;
+  }
+}

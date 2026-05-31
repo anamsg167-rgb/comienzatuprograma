@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Comienza tu programa</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <!-- Teléfono con banderitas -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.2/css/intlTelInput.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+  <div class="logo-box">
+    <a href="index.html">
+      <img src="img/logo.png" alt="GO WEX">
+    </a>
+  </div>
+
+  <nav class="menu">
+    <a href="index.html" data-i18n="navInicio">INICIO</a>
+    <a href="programas.html" data-i18n="navProgramas">NUESTROS PROGRAMAS</a>
+    <a href="blog.html" data-i18n="navBlog">BLOG</a>
+    <a href="comienza.html" class="active" data-i18n="navComienza">COMIENZA TU PROGRAMA</a>
+    <a href="contactanos.html" data-i18n="navContactanos">CONTÁCTANOS</a>
+  </nav>
+
+</header>
+
+<main class="container">
+
+  <!-- Selector de idioma -->
+  <div class="language-switch">
+    <button type="button" id="btnEs">🇪🇸 ES</button>
+    <button type="button" id="btnEn">🇺🇸 EN</button>
+  </div>
+
+  <h1 data-i18n="titulo">COMIENZA TU PROGRAMA</h1>
+
+  <h2 data-i18n="subtitulo">¡Da el primer paso hacia una experiencia internacional inolvidable!</h2>
+
+  <p class="intro" data-i18n="intro">
+    Completa este formulario con tus datos y permítenos ayudarte a encontrar el programa ideal para ti.
+  </p>
+
+  <form id="formulario">
+
+    <h3 data-i18n="seccion01">01. Datos personales</h3>
+
+    <div class="grid">
+
+      <div>
+        <label data-i18n="labelNombres">Nombre(s) completo(s) *</label>
+        <input
+          id="nombres"
+          name="nombres"
+          placeholder="Ingresa tu(s) nombre(s) tal como aparece(n) en tu documento oficial"
+          data-i18n-placeholder="phNombres"
+          required
+        >
+      </div>
+
+      <div>
+        <label data-i18n="labelApellidos">Apellidos completos *</label>
+        <input
+          id="apellidos"
+          name="apellidos"
+          placeholder="Ingresa tus apellidos tal como aparecen en tu documento"
+          data-i18n-placeholder="phApellidos"
+          required
+        >
+      </div>
+
+      <div>
+        <label data-i18n="labelTipoDocumento">Documento de identidad *</label>
+        <select id="tipoDocumento" name="tipoDocumento" required>
+          <option value="" data-i18n="opTipoDocumento">Tipo de documento de identidad</option>
+          <option value="DNI">DNI</option>
+          <option value="RUT">RUT</option>
+          <option value="Pasaporte" data-i18n="opPasaporte">Pasaporte</option>
+          <option value="Carnet de extranjería" data-i18n="opCarnet">Carnet de extranjería</option>
+        </select>
+      </div>
+
+      <div>
+        <label data-i18n="labelNumeroIdentidad">Número de identidad *</label>
+        <input
+          id="numeroIdentidad"
+          name="numeroIdentidad"
+          placeholder="Ingresa el número de tu documento de identidad"
+          data-i18n-placeholder="phNumeroIdentidad"
+          required
+        >
+      </div>
+
+      <div>
+        <label data-i18n="labelFechaNacimiento">Fecha de nacimiento *</label>
+        <input
+          id="fechaNacimiento"
+          name="fechaNacimiento"
+          placeholder="Ingresa tu fecha de nacimiento"
+          data-i18n-placeholder="phFechaNacimiento"
+          required
+          readonly
+        >
+      </div>
+
+      <div>
+        <label data-i18n="labelCelular">Celular *</label>
+        <input
+          id="celular"
+          name="celular"
+          placeholder="Ingresa tu número celular"
+          data-i18n-placeholder="phCelular"
+          required
+        >
+      </div>
+
+      <div>
+        <label data-i18n="labelEmail">Correo electrónico *</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Ingresa tu correo electrónico"
+          data-i18n-placeholder="phEmail"
+          required
+        >
+        <small id="emailError"></small>
+      </div>
+
+      <div>
+        <label data-i18n="labelConfirmarEmail">Confirma tu correo electrónico *</label>
+        <input
+          id="confirmarEmail"
+          name="confirmarEmail"
+          type="email"
+          placeholder="Ingresa nuevamente tu correo electrónico"
+          data-i18n-placeholder="phConfirmarEmail"
+          required
+        >
+        <small id="confirmError"></small>
+      </div>
+
+    </div>
+
+    <h3 data-i18n="seccion02">02. Residencia y estudios</h3>
+
+    <div class="grid">
+
+      <div>
+        <label data-i18n="labelPaisNacimiento">País de nacimiento *</label>
+        <select id="paisNacimiento" name="paisNacimiento" required>
+          <option value="" data-i18n="opSeleccionaPais">Selecciona tu país</option>
+          <option>Argentina</option>
+          <option>Bolivia</option>
+          <option>Brasil</option>
+          <option>Canadá</option>
+          <option>Chile</option>
+          <option>Colombia</option>
+          <option>Costa Rica</option>
+          <option>Ecuador</option>
+          <option>España</option>
+          <option>Estados Unidos</option>
+          <option>México</option>
+          <option>Panamá</option>
+          <option>Paraguay</option>
+          <option>Perú</option>
+          <option>Uruguay</option>
+          <option>Venezuela</option>
+          <option>Otro</option>
+        </select>
+      </div>
+
+      <div>
+        <label data-i18n="labelPaisResidencia">País de residencia *</label>
+        <select id="paisResidencia" name="paisResidencia" required>
+          <option value="" data-i18n="opSeleccionaPaisResidencia">Selecciona tu país de residencia</option>
+          <option>Argentina</option>
+          <option>Bolivia</option>
+          <option>Brasil</option>
+          <option>Canadá</option>
+          <option>Chile</option>
+          <option>Colombia</option>
+          <option>Costa Rica</option>
+          <option>Ecuador</option>
+          <option>España</option>
+          <option>Estados Unidos</option>
+          <option>México</option>
+          <option>Panamá</option>
+          <option>Paraguay</option>
+          <option>Perú</option>
+          <option>Uruguay</option>
+          <option>Venezuela</option>
+          <option>Otro</option>
+        </select>
+      </div>
+
+      <div>
+        <label data-i18n="labelCiudadResidencia">Ciudad / Departamento / Región de residencia *</label>
+        <input
+          id="ciudadResidencia"
+          name="ciudadResidencia"
+          placeholder="Ingresa tu ciudad"
+          data-i18n-placeholder="phCiudadResidencia"
+          required
+        >
+      </div>
+
+      <div>
+        <label data-i18n="labelCentroEstudios">Centro de estudios *</label>
+        <select id="centroEstudios" name="centroEstudios" required>
+          <option value="" data-i18n="opCentroEstudios">Selecciona tu centro de estudios</option>
+          <option>CENTRO DE ALTOS ESTUDIOS DE LA MODA (CEAM)</option>
+          <option>CIBERTEC</option>
+          <option>ESAN</option>
+          <option>INSTITUTO LE CORDON BLEU (ILCB)</option>
+          <option>INSTITUTO DEL SUR (ISUR)</option>
+          <option>INSTITUTO SAN IGNACIO DE LOYOLA (ISIL)</option>
+          <option>INSTITUTO DE EDUCACIÓN SUPERIOR SIMÓN BOLÍVAR</option>
+          <option>PONTIFICIA UNIVERSIDAD CATÓLICA DEL PERÚ (PUCP)</option>
+          <option>SENATI</option>
+          <option>TOULOUSE LAUTREC</option>
+          <option>UNIVERSIDAD ARGENTINA DE LA EMPRESA (UADE)</option>
+          <option>UNIVERSIDAD DE CIENCIAS Y ARTES DE AMÉRICA LATINA (UCAL)</option>
+          <option>UNIVERSIDAD CATÓLICA DE SANTA MARIA (UCSM)</option>
+          <option>UNIVERSIDAD CATÓLICA SAN PABLO (UCSP)</option>
+          <option>UNIVERSIDAD CÉSAR VALLEJO (UCV)</option>
+          <option>UNIVERSIDAD CIENTÍFICA DEL SUR (UCSUR)</option>
+          <option>UNIVERSIDAD CONTINENTAL (UC)</option>
+          <option>UNIVERSIDAD DE BUENOS AIRES (UBA)</option>
+          <option>UNIVERSIDAD DE LIMA (UL)</option>
+          <option>UNIVERSIDAD DE PALERMO (UP)</option>
+          <option>UNIVERSIDAD DE PIURA (UDEP)</option>
+          <option>UNIVERSIDAD DE SAN MARTÍN DE PORRES (USMP)</option>
+          <option>UNIVERSIDAD DEL PACÍFICO (UP)</option>
+          <option>UNIVERSIDAD FEMENINA DEL SAGRADO CORAZÓN (UNIFE)</option>
+          <option>UNIVERSIDAD LA SALLE (ULASALLE)</option>
+          <option>UNIVERSIDAD NACIONAL AGRARIA LA MOLINA (UNALM)</option>
+          <option>UNIVERSIDAD NACIONAL DANIEL ALCIDES CARRIÓN (UNDAC)</option>
+          <option>UNIVERSIDAD NACIONAL DE INGENIERIA (UNI)</option>
+          <option>UNIVERSIDAD NACIONAL DE SAN AGUSTIN DE AREQUIPA (UNSA)</option>
+          <option>UNIVERSIDAD NACIONAL DE SAN MARTÍN (UNSM)</option>
+          <option>UNIVERSIDAD NACIONAL DEL CALLAO (UNAC)</option>
+          <option>UNIVERSIDAD NACIONAL ENRIQUE GUZMÁN Y VALLE (UNE)</option>
+          <option>UNIVERSIDAD NACIONAL MAYOR DE SAN MARCOS (UNMSM)</option>
+          <option>UNIVERSIDAD PERUANA CAYETANO HEREDIA (UPCH)</option>
+          <option>UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS (UPC)</option>
+          <option>UNIVERSIDAD PERUANA UNIÓN (UPEU)</option>
+          <option>UNIVERSIDAD PRIVADA ANTENOR ORREGO (UPAO)</option>
+          <option>UNIVERSIDAD PRIVADA DEL NORTE (UPN)</option>
+          <option>UNIVERSIDAD RICARDO PALMA (URP)</option>
+          <option>UNIVERSIDAD SAN IGNACIO DE LOYOLA (USIL)</option>
+          <option>UNIVERSIDAD SANTO TORIBIO DE MOGROVEJO (USAT)</option>
+          <option>UNIVERSIDAD TECNOLÓGICA DEL PERÚ (UTP)</option>
+          <option value="Otro" data-i18n="opOtro">Otro</option>
+        </select>
+      </div>
+
+      <div id="otroCentroBox" class="hidden">
+        <label data-i18n="labelOtroCentro">Especifica tu centro de estudios *</label>
+        <input
+          id="otroCentroEstudios"
+          name="otroCentroEstudios"
+          placeholder="Ingresa tu centro de estudios"
+          data-i18n-placeholder="phOtroCentro"
+        >
+      </div>
+
+      <div>
+        <label data-i18n="labelCarrera">Carrera *</label>
+        <input
+          id="carrera"
+          name="carrera"
+          placeholder="Ingresa tu carrera"
+          data-i18n-placeholder="phCarrera"
+          required
+        >
+      </div>
+
+    </div>
+
+    <h3 data-i18n="seccion03">03. Programas</h3>
+
+    <div class="grid">
+
+      <div>
+        <label data-i18n="labelPrograma">¿Qué programa estás buscando? *</label>
+        <select id="programa" name="programa" required>
+          <option value="" data-i18n="opPrograma">Selecciona el programa</option>
+          <option>INTERNSHIP AND TRAINEE USA</option>
+          <option>STUDY ABROAD</option>
+          <option>SUMMER CAMP USA</option>
+          <option>VOLUNTEER ABROAD</option>
+          <option>WORK AND TRAVEL 26-27</option>
+          <option>WORKING HOLIDAY</option>
+        </select>
+      </div>
+
+      <div>
+        <label data-i18n="labelFechaPrograma">Fecha ideal de inicio del programa/viaje *</label>
+        <input
+          id="fechaInicioPrograma"
+          name="fechaInicioPrograma"
+          placeholder="Escoge tu fecha"
+          data-i18n-placeholder="phFechaPrograma"
+          required
+          readonly
+        >
+      </div>
+
+    </div>
+
+    <button type="submit" data-i18n="botonEnviar">
+      Enviar
+    </button>
+
+    <p id="mensaje"></p>
+
+  </form>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+
+<!-- Teléfono con banderitas -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.2/js/intlTelInput.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
